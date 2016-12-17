@@ -15,10 +15,34 @@ var divide = function(number1, number2) {
 };
 
 $(function() {
-  $("form#add").submit(function(event) {
-    var number1 = parseInt($("#add1").val());
-    var number2 = parseInt($("#add2").val());
+  $("button#addition").click(function(event) {
+    var number1 = parseInt($("#input1").val());
+    var number2 = parseInt($("#input2").val());
     var result = (add(number1, number2));
+    $("#output").text(result);
+    event.preventDefault();
+  });
+
+  $("button#subtraction").click(function(event) {
+    var number1 = parseInt($("#input1").val());
+    var number2 = parseInt($("#input2").val());
+    var result = (subtract(number1, number2));
+    $("#output").text(result);
+    event.preventDefault();
+  });
+
+  $("button#multiplication").click(function(event) {
+    var number1 = parseInt($("#input1").val());
+    var number2 = parseInt($("#input2").val());
+    var result = (multiply(number1, number2));
+    $("#output").text(result);
+    event.preventDefault();
+  });
+
+  $("button#division").click(function(event) {
+    var number1 = parseInt($("#input1").val());
+    var number2 = parseInt($("#input2").val());
+    var result = (divide(number1, number2));
     $("#output").text(result);
     event.preventDefault();
   });
